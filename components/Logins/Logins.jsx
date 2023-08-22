@@ -12,7 +12,14 @@ const Logins = ({ setLogin }) => {
           <input type="password" placeholder="Password" name="password" />
           <button>Login</button>
         </form>
-        <span onClick={() => setLogin(false)}>Sign up</span>
+        <div>
+          <span style={{ color: "gray" }}>Don't have an account? </span>
+          <span onClick={() => setLogin(false)}>Sign up</span>
+        </div>
+        <div>
+          <span style={{ color: "gray" }}>Sign in as a demo user: </span>
+          <span>Demo</span>
+        </div>
       </div>
     </div>
   );

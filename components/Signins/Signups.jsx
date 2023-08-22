@@ -1,8 +1,10 @@
 import React from "react";
 import "./signins.scss";
+import { useNavigate } from "react-router-dom";
 
 // in Login
 const Signups = ({ setLogin }) => {
+  const navigate = useNavigate();
   return (
     <div className="sign-ups">
       <div className="login-form">
@@ -14,7 +16,14 @@ const Signups = ({ setLogin }) => {
           <input type="password" placeholder="Password" name="email" />
           <button>Login</button>
         </form>
-        <span onClick={() => setLogin(true)}>Login</span>
+        <div>
+          <span style={{ color: "gray" }}>Already have an account? </span>
+          <span onClick={() => setLogin(true)}>Login</span>
+        </div>
+        <div>
+          <span style={{ color: "gray" }}>Sign in as a demo user: </span>
+          <span onClick={() => navigate("/demo")}>Demo</span>
+        </div>
       </div>
     </div>
   );
